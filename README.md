@@ -1,16 +1,14 @@
 # UPW
-Resolve the limitation of image understanding in multimodal LLMs
+Resolve the limitation of visual understanding in multimodal LLMs
 
-## Current issues: The limitation of image understanding in multimodal LLMs
-The widely used open-source multimodal large language models currently suffer from the limitation of image understanding. There may be difficulties in understanding the details in the image, such as recognizing small text or numbers; either there may be problems with understanding the images in multiple rounds of conversations, with the initial conversation being understood correctly and the subsequent conversations being misunderstood. 
+## Current issues: The limitation of visual understanding in multimodal LLMs
+The widely used open-source multimodal large language models currently suffer from the limitation of visual understanding. There may be difficulties in understanding the details in the image, such as recognizing small text or numbers; either there may be problems with understanding the images in multiple rounds of conversations, with the initial conversation being understood correctly and the subsequent conversations being misunderstood. 
 
 For example, the following error example:
 Almost all open-source models have error in identifying license plate number of car.
 
-* GLM-5.1
+* GLM-5.1 or GLM-5V-Turbo
 ![GLM_5.1](problem/GLM_51/P1.png)
-
-* GLM-5V-Turbo
 ![GLM_5V_Turbo](problem/GLM_5V_Turbo/P1.png)
 
 * KIMI-2.6-Instant
