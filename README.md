@@ -64,7 +64,7 @@ cd /path/to/upw/src/model
 !python train_model.py /path/to/image -l 120000 --imageonly
 ```
 
-* training curves
+* training curves  
 This is the training curve we obtained.
 ![image_only_training_curves](doc/loss.png)
 
