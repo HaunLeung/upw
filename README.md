@@ -17,7 +17,7 @@ For example, almost all open-source models have error in identifying license pla
 ![Qwen_35](problem/Qwen_35/P1.png)
 [See more error examples](#error-examples). 
 
-(NOTE: The test images used in the error examples are located in our code repository ['problem/image'](problem/image) directory.)
+(NOTE: The test images used in the error examples are located in our code repository ['problem/image'](problem/image/README.md) directory.)
 
 ## Experiment How to
 ### Install dependencies
@@ -31,7 +31,7 @@ For example, almost all open-source models have error in identifying license pla
 ```
 
 * install flash_attention_interface  
-The install package is in our code repository ["src/flash_attn_api"](src/flash_attn_api) directory.
+The install package is in our code repository ["src/flash_attn_api"](src/flash_attn_api/README.md) directory.
 ```python
 	cd /path/to/upw/src/flash_attn_api
 	pip install setuptools
@@ -70,7 +70,7 @@ The text file contains sentence paragraphs and image references. And request to 
 ```python
 Provide a brief description of the given image. <|image|>GCC_train_002582585.jpg<|/image|> olive oil is a healthy ingredient used liberally .
 ```
-See more examples in our code repository ["src/mixed_files"](src/mixed_files) directory.
+See more examples in our code repository ["src/mixed_files"](src/mixed_files/README.md) directory.
 
 * prepare training data  
 Prepare the text files according to the format and put them in a directory. For example: /path/to/mixed_files. Put the images referenced in another directory. For example: /path/to/image.
