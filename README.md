@@ -64,6 +64,10 @@ cd /path/to/upw/src/model
 !python train_model.py /path/to/image -l 120000 --imageonly
 ```
 
+* training curves
+This is the training curve we obtained.
+![image_only_training_curves](doc/loss.png)
+
 ### Mixed Image And Text Unsupervised Pretraining
 * training data format  
 The text file contains sentence paragraphs and image references. And request to image referenced using <|image|> and <|/image|> symbols. For example: 
