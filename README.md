@@ -21,7 +21,7 @@ For example, almost all open-source models have error in identifying license pla
 
 ## Experiment How to
 ### Install dependencies
-* install flash-attention-turing
+* install flash-attention-turing\\
 ```python
 	git clone https://github.com/ssiu/flash-attention-turing
 	cd /path/to/flash-attention-turing
@@ -29,26 +29,26 @@ For example, almost all open-source models have error in identifying license pla
 	pip install -v . 
 ```
 
-* install flash_attention_interface
-  The install package is in our code repository "src/flash_attn_api" directory.
+* install flash_attention_interface\\
+The install package is in our code repository "src/flash_attn_api" directory.
 ```python
 	cd /path/to/src/flash_attn_api
 	pip install setuptools
 	python setup.py install
 ```
 
-* install tokenizers
-  Need a higher version, for example version 0.22.2.
+* install tokenizers\\
+Need a higher version, for example version 0.22.2.
 ```python
 pip install tokenizers
 ```
 
-* install torch
-  You must ensure that torch is installed, for example version 2.10.0+cu128.
+* install torch\\
+You must ensure that torch is installed, for example version 2.10.0+cu128.
 
 ### Image Only Unsupervised Pretraining
-* prepare training data 
-  You can use any image dataset. We support images of any ratio. In paper we use the images of LLaVA-CC3M-Pretrain-595K dataset. You should put the images in a directory. For example: /path/to/image.
+* prepare training data\\
+You can use any image dataset. We support images of any ratio. In paper we use the images of LLaVA-CC3M-Pretrain-595K dataset. You should put the images in a directory. For example: /path/to/image.
 ```python 
 mkdir /path/to/image
 cd /path/to/image
@@ -56,26 +56,26 @@ wget https://huggingface.co/datasets/liuhaotian/LLaVA-CC3M-Pretrain-595K/blob/ma
 unzip images.zip
 ```
 
-* run training
-  We run the script to conducte image only unsupervised pretraining. For example we use 120000 images to train.
+* run training\\
+We run the script to conducte image only unsupervised pretraining. For example we use 120000 images to train.
 ```python
 cd /path/to/src/model
 !python train_model.py /path/to/image -l 120000 --imageonly
 ```
 
 ### Mixed Image And Text Unsupervised Pretraining
-* training data format
-  The text file contains sentence paragraphs and image references. And request to image referenced using <|image|> and <|/image|> symbols. For example: 
+* training data format\\
+The text file contains sentence paragraphs and image references. And request to image referenced using <|image|> and <|/image|> symbols. For example: 
 ```python
 Provide a brief description of the given image. <|image|>GCC_train_002582585.jpg<|/image|> olive oil is a healthy ingredient used liberally .
 ```
 See more examples in our code repository "src/mixed_files" directory.
 
-* prepare training data
-  Prepare the text files according to the format and put them in a directory. For example: /path/to/mixed_files. Put the images referenced in another directory. For example: /path/to/image.
+* prepare training data\\
+Prepare the text files according to the format and put them in a directory. For example: /path/to/mixed_files. Put the images referenced in another directory. For example: /path/to/image.
 
-* run training
-  We run the script to conducte mixed image and text unsupervised pretraining. For example we use 120000 mixed files to train.
+* run training\\
+We run the script to conducte mixed image and text unsupervised pretraining. For example we use 120000 mixed files to train.
 ```python
 cd /path/to/src/model
 !python train_model.py /path/to/mixed_files -l 120000 -i /path/to/image
