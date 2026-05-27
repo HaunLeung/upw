@@ -30,7 +30,7 @@ For example, almost all open-source models have error in identifying license pla
 ```
 
 * install flash_attention_interface
-The install package is in our code repository "src/flash_attn_api" directory.
+  The install package is in our code repository "src/flash_attn_api" directory.
 ```python
 	cd /path/to/src/flash_attn_api
 	pip install setuptools
@@ -38,17 +38,17 @@ The install package is in our code repository "src/flash_attn_api" directory.
 ```
 
 * install tokenizers
-Need a higher version, for example version 0.22.2.
+  Need a higher version, for example version 0.22.2.
 ```python
 pip install tokenizers
 ```
 
 * install torch
-You must ensure that torch is installed, for example version 2.10.0+cu128.
+  You must ensure that torch is installed, for example version 2.10.0+cu128.
 
 ### Image Only Unsupervised Pretraining
 * prepare training data 
-You can use any image dataset. We support images of any ratio. In paper we use the images of LLaVA-CC3M-Pretrain-595K dataset. You should put the images in a directory. For example: /path/to/image.
+  You can use any image dataset. We support images of any ratio. In paper we use the images of LLaVA-CC3M-Pretrain-595K dataset. You should put the images in a directory. For example: /path/to/image.
 ```python 
 mkdir /path/to/image
 cd /path/to/image
@@ -57,7 +57,7 @@ unzip images.zip
 ```
 
 * run training
-We run the script to conducte image only unsupervised pretraining. For example we use 120000 images to train.
+  We run the script to conducte image only unsupervised pretraining. For example we use 120000 images to train.
 ```python
 cd /path/to/src/model
 !python train_model.py /path/to/image -l 120000 --imageonly
@@ -65,17 +65,17 @@ cd /path/to/src/model
 
 ### Mixed Image And Text Unsupervised Pretraining
 * training data format
-The text file contains sentence paragraphs and image references. And request to image referenced using <|image|> and <|/image|> symbols. For example: 
+  The text file contains sentence paragraphs and image references. And request to image referenced using <|image|> and <|/image|> symbols. For example: 
 ```python
 Provide a brief description of the given image. <|image|>GCC_train_002582585.jpg<|/image|> olive oil is a healthy ingredient used liberally .
 ```
 See more examples in our code repository "src/mixed_files" directory.
 
 * prepare training data
-Prepare the text files according to the format and put them in a directory. For example: /path/to/mixed_files. Put the images referenced in another directory. For example: /path/to/image.
+  Prepare the text files according to the format and put them in a directory. For example: /path/to/mixed_files. Put the images referenced in another directory. For example: /path/to/image.
 
 * run training
-We run the script to conducte mixed image and text unsupervised pretraining. For example we use 120000 mixed files to train.
+  We run the script to conducte mixed image and text unsupervised pretraining. For example we use 120000 mixed files to train.
 ```python
 cd /path/to/src/model
 !python train_model.py /path/to/mixed_files -l 120000 -i /path/to/image
@@ -87,6 +87,7 @@ If you have any questions, please feel free to submit a GitHub issue or contact 
 ## Citation
 If you find our code and models useful, please kindly cite the following information.
 
+```python
 @misc{leung2026unifiedpixtokenword,
       title={Unified Pix Token And Word Token Generative Language Model}, 
       author={Haun Leung and ZiNan Wang},
@@ -96,6 +97,7 @@ If you find our code and models useful, please kindly cite the following informa
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2605.14028}, 
 }
+```
 
 ## Error examples
 Almost all open-source models fail in identifying license plate number of car.
