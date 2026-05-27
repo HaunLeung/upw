@@ -21,6 +21,7 @@ For example, almost all open-source models have error in identifying license pla
 
 ## Experiment How to
 ### Install dependencies
+(NOTE: Change "/path/to/" that appears below to your local path.)
 * install flash-attention-turing  
 ```python
 	git clone https://github.com/ssiu/flash-attention-turing
@@ -32,7 +33,7 @@ For example, almost all open-source models have error in identifying license pla
 * install flash_attention_interface  
 The install package is in our code repository "src/flash_attn_api" directory.
 ```python
-	cd /path/to/src/flash_attn_api
+	cd /path/to/upw/src/flash_attn_api
 	pip install setuptools
 	python setup.py install
 ```
@@ -59,7 +60,7 @@ unzip images.zip
 * run training  
 We run the script to conducte image only unsupervised pretraining. For example we use 120000 images to train.
 ```python
-cd /path/to/src/model
+cd /path/to/upw/src/model
 !python train_model.py /path/to/image -l 120000 --imageonly
 ```
 
@@ -77,7 +78,7 @@ Prepare the text files according to the format and put them in a directory. For 
 * run training  
 We run the script to conducte mixed image and text unsupervised pretraining. For example we use 120000 mixed files to train.
 ```python
-cd /path/to/src/model
+cd /path/to/upw/src/model
 !python train_model.py /path/to/mixed_files -l 120000 -i /path/to/image
 ```
 
