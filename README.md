@@ -23,6 +23,8 @@ For example, almost all open-source models have error in identifying license pla
 We first analyzed the reasons for the limitations of current state-of-art open source generative language models in visual understanding. Then we propose a new model to solve this issues: Unified pix token and word token generative language model. Our model finally unifies pix token and word token together. In the unified token space, we can do self attention operation and token predict for both pix token and word token. The new model also features with each pix of image having its own token embedding, color folding, global conditional attention approximation and image unsupervised pretraining. We conducted only image unsupervised pretraining experiments using our model. The experimental results have proven that after a certain amount of data pretraining, our small parammters model can learn the patterns of the pix token sequence. We believe that when we increase the number of parameters and datas, our model also conforms to the scaling law of generative language model. The new model we proposed is a perfect way to unify pix token and word token together into generative language model. We believe it can replace the CLIP/SLIP method currently used in production.
 
 ## Experiment How to
+Due to a lack of computing resources, our experiment was conducted on low-end GPU devices (16G memory). So it has to rely on flash-attention-turing. And the model parameters is small (Image Only 120M, Mixed Image And Text 170M) due to out of memory. But it is sufficient to prove the conclusion of the paper.
+
 ### Install dependencies
 (NOTE: Change "/path/to/" that appears below to your local path.)
 * install flash-attention-turing  
