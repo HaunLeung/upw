@@ -1,8 +1,8 @@
 # UPW (UNIFIED PIX TOKEN AND WORD TOKEN GENERATIVE LANGUAGE MODEL)
 Our goal is to solve the limitation of visual understanding in the current state-of-art open source multimodal generative language model. This code repository is an experiment to demonstrate the unified pix token and word token generative language model proposed in the paper [UNIFIED PIX TOKEN AND WORD TOKEN GENERATIVE LANGUAGE MODEL](https://arxiv.org/abs/2605.14028). User can conducte image unsupervised pretraining experiments that include [mixed image and text](#mixed-image-and-text-unsupervised-pretraining) or [image only](#image-only-unsupervised-pretraining).
 
-## Abstract of Paper
-Since the emergence of Vision Transformer (ViT), it has been widely used in generative language model and generative visual model. Especially in the current state-of-art open source multimodal models, ViT obtained by CLIP or SigLIP method serves as the vision encoder backbone to help them acquire visual understanding capabilities. But this method leads to limitations in visual understanding for details, such as difficulty in recognizing small text or numbers in images. To address these issues, we propose a new model to unify pix token and word token into the generative language model. The new model also features with each pix of image having its own token embedding, color folding, global conditional attention approximation and image unsupervised pretraining.
+## Paper Abstract
+Since the emergence of Vision Transformer (ViT), it has been widely used in generative language model and generative visual model. Especially in the current state-of-art open source multimodal models, ViT obtained by CLIP or SigLIP method serves as the vision encoder backbone to help them acquire visual understanding capabilities. But this method leads to limitations in visual understanding for details, such as difficulty in recognizing small text or numbers in images. To address these [issues](#current-issues), we propose a new model to unify pix token and word token into the generative language model. The new model also features with each pix of image having its own token embedding, color folding, global conditional attention approximation and image unsupervised pretraining.
 
 * Unified Pix Token And Word Token Model overview.
 ![Unified Model overview](doc/upw_arch.png)
@@ -18,6 +18,9 @@ For example, almost all open-source models have error in identifying license pla
 [See more error examples](#error-examples). 
 
 (NOTE: The test images used in the error examples are located in our code repository ['problem/image'](problem/image/README.md) directory.)
+
+## Paper research
+We first analyzed the reasons for the limitations of current state-of-art open source generative language models in visual understanding. Then we propose a new model to solve this issues: Unified pix token and word token generative language model. Our model finally unifies pix token and word token together. In the unified token space, we can do self attention operation and token predict for both pix token and word token. The new model also features with each pix of image having its own token embedding, color folding, global conditional attention approximation and image unsupervised pretraining. We conducted only image unsupervised pretraining experiments using our model. The experimental results have proven that after a certain amount of data pretraining, our small parammters model can learn the patterns of the pix token sequence. We believe that when we increase the number of parameters and datas, our model also conforms to the scaling law of generative language model. The new model we proposed is a perfect way to unify pix token and word token together into generative language model. We believe it can replace the CLIP/SLIP method currently used in production.
 
 ## Experiment How to
 ### Install dependencies
