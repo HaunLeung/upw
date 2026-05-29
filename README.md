@@ -10,7 +10,7 @@ Since the emergence of Vision Transformer (ViT), it has been widely used in gene
 * Unified Pix Token And Word Token Model Process.
 ![Unified Model Process](doc/upw_arch_follow.png)
 
-## Current issues: The limitation of visual understanding in multimodal generative language model
+## Current issues
 The widely used open-source multimodal large language models currently suffer from the limitation of visual understanding. There may be difficulties in understanding the details in the image, such as recognizing small text or numbers; either there may be problems with understanding the images in multiple rounds of conversations, with the initial conversation being understood correctly and the subsequent conversations being misunderstood. 
 
 For example, almost all open-source models have error in identifying license plate number of car. 
