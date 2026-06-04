@@ -75,7 +75,7 @@ This is the training curve we obtained.
 
 ### Mixed Image And Text Unsupervised Pretraining
 * training data format  
-The text file contains sentence paragraphs and image references. And request to image referenced using <|image|> and <|/image|> symbols. For example: 
+The text file contains sentence paragraphs and image references. And request to image referenced using <|image|> and <|/image|> special tokens. For example: 
 ```python
 Provide a brief description of the given image. <|image|>GCC_train_002582585.jpg<|/image|> olive oil is a healthy ingredient used liberally .
 ```

@@ -1,0 +1,7 @@
+I have two cute pets.
+
+<|image|>my_dog.jpg<|/image|> 
+This is my dog. It has round, warm eyes that glint like melted honey when it tilts its little head. It wags its curly tail so fast that its whole little butt wiggles when you call its name.
+
+<|image|>my_cat.jpg<|/image|>
+This is my cat. It curls up on the windowsill, curling its tail around its tiny paws. It rubs its little head against my hand, purring a soft sleepy rumble.
